@@ -1,16 +1,20 @@
 {
-  "description": "Personal appearence of Trello.com.",
+  "description": "Customize Trello appearence with minimal settings.",
   "manifest_version": 2,
-  "name": "itrello",
-  "version": "1.0",
-  "homepage_url": "https://gchen.cn",
+  "name": "iTrello",
+  "version": "1.0.2",
+  "icons": {
+    "48": "icons/appx1.png"
+  },
+  "author": "MGC",
+  "homepage_url": "https://github.com/chagel/itrello",
 
   "background": {
     "scripts": ["background.js"]
   },
 
   "page_action": {
-    "default_icon": "icons/off.svg",
+    "default_icon": "icons/on.svg",
     "browser_style": true
   },
 

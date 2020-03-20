@@ -26,6 +26,6 @@ console.debug("Show card id")
 ids = document.getElementsByClassName("card-short-id")
 for (let i=0; i < ids.length; i++) {
   ids[i].classList.remove('hide')
-  ids[i].style.fontWeight = '900'
+  ids[i].style.fontWeight = '600'
 }
 

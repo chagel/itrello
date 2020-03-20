@@ -5,7 +5,8 @@
 
 This extension renders Trello.com in a biased taste:
 
+* Show card ID
 * Display specified lists
-* Cards are compact
+* Compact cards
 * Sort cards (TBD)
 
