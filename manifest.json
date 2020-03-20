@@ -2,9 +2,9 @@
   "description": "Customize Trello appearence with minimal settings.",
   "manifest_version": 2,
   "name": "iTrello",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
-    "48": "icons/appx1.png"
+    "48": "icons/app.png"
   },
   "author": "MGC",
   "homepage_url": "https://github.com/chagel/itrello",
@@ -14,7 +14,7 @@
   },
 
   "page_action": {
-    "default_icon": "icons/on.svg",
+    "default_icon": "icons/app.png",
     "browser_style": true
   },
 

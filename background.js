@@ -6,7 +6,7 @@ function redraw(tab) {
 
 function initializePageAction(tab) {
   if ((tab.url).match(/trello\.com/g)) {
-    browser.pageAction.setIcon({tabId: tab.id, path: "icons/on.svg"});
+    browser.pageAction.setIcon({tabId: tab.id, path: "icons/app.png"});
     browser.pageAction.setTitle({tabId: tab.id, title: TITLE});
     browser.pageAction.show(tab.id);
   }
