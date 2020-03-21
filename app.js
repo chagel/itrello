@@ -4,7 +4,13 @@ board = document.getElementById("board")
 
 var gettingItem = browser.storage.sync.get('boards');
 gettingItem.then((res) => {
-  let re = new RegExp(res.boards, 'g')
+
+  boards = res.boards
+  if (boards == undefined) {
+    boards = 'Staging|Backlog|Doing|Testing'
+  }
+
+  let re = new RegExp(boards, 'g')
   for (let i=0; i < board.children.length; i++) {
     list = board.children[i]
     title = list.firstElementChild.firstElementChild.firstElementChild.nextElementSibling
