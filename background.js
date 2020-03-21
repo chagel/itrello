@@ -1,10 +1,12 @@
 const TITLE = "Enable iTrello to personalize Trello ";
 
 function redraw(tab) {
+  browser.tabs.executeScript({file: "browser-polyfill.min.js"})
   browser.tabs.executeScript({file: "app.js"})
 }
 
 function initializePageAction(tab) {
+
   if ((tab.url).match(/trello\.com/g)) {
     browser.pageAction.setIcon({tabId: tab.id, path: "icons/app.png"});
     browser.pageAction.setTitle({tabId: tab.id, title: TITLE});

@@ -2,7 +2,7 @@
   "description": "Customize Trello appearence with minimal settings.",
   "manifest_version": 2,
   "name": "iTrello",
-  "version": "1.0.3",
+  "version": "1.1",
   "icons": {
     "48": "icons/app.png"
   },
@@ -15,7 +15,7 @@
   },
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["browser-polyfill.min.js", "background.js"]
   },
 
   "page_action": {
@@ -31,7 +31,7 @@
 
   "applications": {
     "gecko": {
-      "id": "chagel@gmail.com"
+      "id": "itrello@developer.mozilla.org"
     }
   }
 }
