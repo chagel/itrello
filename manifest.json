@@ -6,8 +6,13 @@
   "icons": {
     "48": "icons/app.png"
   },
+
   "author": "MGC",
   "homepage_url": "https://github.com/chagel/itrello",
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true
+  },
 
   "background": {
     "scripts": ["background.js"]
@@ -20,6 +25,13 @@
 
   "permissions": [
     "activeTab",
-    "tabs"
-  ]
+    "tabs",
+    "storage"
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "chagel@gmail.com"
+    }
+  }
 }

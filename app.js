@@ -2,13 +2,18 @@ console.debug("Hide boards")
 
 board = document.getElementById("board")
 
-for (let i=0; i < board.children.length; i++) {
-  list = board.children[i]
-  title = list.firstElementChild.firstElementChild.firstElementChild.nextElementSibling
-  if(title && !title.innerText.match(/Staging|Backlog|Doing|Testing/g)) {
-    list.style.display = 'none'
+var gettingItem = browser.storage.sync.get('boards');
+gettingItem.then((res) => {
+  let re = new RegExp(res.boards, 'g')
+  for (let i=0; i < board.children.length; i++) {
+    list = board.children[i]
+    title = list.firstElementChild.firstElementChild.firstElementChild.nextElementSibling
+    if(title && !title.innerText.match(re)) {
+      list.style.display = 'none'
+    }
   }
-}
+})
+
 
 console.debug("Compact cards")
 cards = document.getElementsByClassName("list-card-cover")
