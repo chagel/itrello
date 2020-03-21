@@ -11,7 +11,7 @@
   "homepage_url": "https://github.com/chagel/itrello",
   "options_ui": {
     "page": "options.html",
-    "browser_style": true
+    "chrome_style": true
   },
 
   "background": {
@@ -20,18 +20,13 @@
 
   "page_action": {
     "default_icon": "icons/app.png",
-    "browser_style": true
+    "chrome_style": true
   },
 
   "permissions": [
     "activeTab",
     "tabs",
     "storage"
-  ],
+  ]
 
-  "applications": {
-    "gecko": {
-      "id": "itrello@developer.mozilla.org"
-    }
-  }
 }
