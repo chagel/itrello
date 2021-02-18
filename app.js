@@ -1,12 +1,12 @@
-function _toggleElementsByClass(className) {
+function _hideElementsByClass(className) {
   els = document.getElementsByClassName(className)
   for (let i=0; i < els.length; i++) {
     els[i].style.display = 'none'
   }
 }
 
-function toggleBoards() {
-  console.debug("Hide boards")
+function hideLists() {
+  console.debug("Hide lists")
   board = document.getElementById("board")
 
   var gettingItem = browser.storage.sync.get('boards');
@@ -30,12 +30,12 @@ function toggleBoards() {
 
 function compactCards() {
   console.debug("Compact cards")
-  _toggleElementsByClass("list-card-cover")
+  _hideElementsByClass("list-card-cover")
 }
 
-function toggleBadges() {
+function hideBadges() {
   console.debug("Hide badges")
-  _toggleElementsByClass("badges")
+  _hideElementsByClass("badges")
 }
 
 function showCardIds() {
@@ -47,14 +47,21 @@ function showCardIds() {
   }
 }
 
-function toggleStickers() {
-  console.debug("Toggle stickers")
-  _toggleElementsByClass("list-card-stickers-area")
+function hideStickers() {
+  console.debug("hide stickers")
+  _hideElementsByClass("list-card-stickers-area")
 }
 
-toggleBoards()
+function hideBanner() {
+  console.debug("hide banner")
+  var banners = document.getElementById("banners")
+  banners.style.display = 'none'
+}
+
+hideLists()
 compactCards()
-toggleBadges()
+hideBadges()
 showCardIds()
-toggleStickers()
+hideStickers()
+hideBanner()
 
